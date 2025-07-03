@@ -76,6 +76,7 @@
 
 
 
+
 // 5 - Function inside Function
 
 // const parentFunction = () => {
@@ -198,16 +199,16 @@
 
 // 12 - Function Returning Function
 
-function parentFunction() {
+// function parentFunction() {
 
-    function childFunction() {
-        console.log("From Child Function");
-    }
+//     function childFunction() {
+//         console.log("From Child Function");
+//     }
 
-    return childFunction;
-}
+//     return childFunction;
+// }
 
-const returnFunction = parentFunction();
+// const returnFunction = parentFunction();
 
-console.log(returnFunction);
-returnFunction();
+// // console.log(returnFunction);
+// returnFunction();

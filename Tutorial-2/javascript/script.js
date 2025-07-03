@@ -29,13 +29,17 @@
 // console.log(fruits);
 // console.log("hello");
 
+
+
+
+
 // 2 - Primitive and Reference type
 
 // Theory - here num1, num2 will be stored in STACK separately. So after the value change in num1 the num2 will not access the updated value as in stack num2 is storing the old value of num1
 
 // let num1 = 40;
 // let num2 = num1;
-// console.log('Value of num1:- ',num1);
+// console.log('Value of num1:- ',num1); 
 // console.log('Value of num2:- ',num2);
 // num1++;
 // console.log('Value of num1:- ',num1);
@@ -50,6 +54,10 @@
 // array1.push("item3");
 // console.log("Array1:- ",array1);
 // console.log("Array2:- ",array2);
+
+
+
+
 
 // 3 - Clone Array, Concate Array, Spread operator
 
@@ -105,12 +113,20 @@
 // console.log("Array2 in uppercase:-",array2);
 // console.log("Default Array1:-",array1);
 
+
+
+
+
 // 5 - Creating array using const
-// Thoery - as even after using const the value is been changed because array is stored in heap and the address of the heap array is tored in STACK. so value change function is happening in heap instead of stack.
+// Theory - as even after using const the value is been changed because array is stored in heap and the address of the heap array is tored in STACK. so value change function is happening in heap instead of stack.
 
 // const fruits = ["apple", "banana", "mango"];
 // fruits.push("grapes");
 // console.log(fruits);
+
+
+
+
 
 // 6 - while loop in array
 
@@ -123,8 +139,12 @@
 // }
 // console.log(fruits2);
 
+
+
+
+
 // 7 - For of loop , for in loop
-// Theory - in "for of" it will iterate over the values of the iterable object(here - fruits). In "for in" it will ietrate over the values and return its index value
+// Theory - in "for of" it will iterate overthe values of the iterable object(here - fruits). In "for in" it will ietrate over the values and return its index value
 
 // console.log("Using 'for of' for getting actual values");
 // const fruits = ["apple", "banana", "mango"];
@@ -132,10 +152,16 @@
 //     console.log(fruit);
 // }
 
+
 // console.log("Using 'for in' for getting the index value");
+// const fruits = ["apple", "banana", "mango"];
 // for(let index in fruits) {
 //     console.log(index);
 // }
+
+
+
+
 
 // 8 - Array destructuring
 
@@ -144,6 +170,10 @@
 // console.log("Value of fruitval1:-",fruitval1);
 // console.log("Value of fruitval2:-",fruitval2);
 // console.log("Remaining value are stored in fruitsArray",fruitsArray);
+
+
+
+
 
 // 9 - objects
 // Theory - Objects are Referenced type. Object store key value pairs. object don't have index.
@@ -162,6 +192,10 @@
 
 // console.log("My name is "+person["name"]+".","My Age is "+person["age"]+".");
 
+
+
+
+
 // 10 - dot vs bracket notation
 
 // Using bracket in 'Enrollment number'
@@ -179,6 +213,10 @@
 
 // console.log(`My name is ${person.name} and age is ${person.age}. My Enrollment number is ${person['enrollment number']}. My Hobbies are ${person.hobbies}. My email address is ${person.email}`);
 
+
+
+
+
 // 11 - Iterate objects
 
 // const person = {
@@ -191,6 +229,10 @@
 // for(let key in person) {
 //     console.log(`Key:- ${key}, Values is ${person[key]}`);
 // }
+
+
+
+
 
 // 12 - Computed objects
 
@@ -213,6 +255,10 @@
 
 // console.log(myDetail);
 
+
+
+
+
 // 13 - Spread operator in objects
 
 // const obj1 = {
@@ -234,6 +280,8 @@
 
 
 
+
+
 // 14 - Object destructuring
 // object name : new variable name (name:myName)
 
@@ -247,6 +295,8 @@
 // const {name:myName, age:myAge} = myDetail;
 
 // console.log(`My name is ${myName}. My age is ${myAge}`);
+
+
 
 
 
@@ -264,27 +314,28 @@
 
 
 // for(let detail of myDetail) {
-//     console.log(detail['name']);
+//     console.log(detail.name);
 // }
 
 // console.log(myDetail);
 
 
 
+
 // 16 - Nested destructuring
 
-const myDetail = [
-    {id: 10, name: 'Smit', gender: 'male'},
-    {id: 11, name: 'Parth', gender: 'male'},
-    {id: 12, name: 'vidhi', gender: 'female'},
-]
+// const myDetail = [
+//     {id: 10, name: 'Smit', gender: 'male'},
+//     {id: 11, name: 'Parth', gender: 'male'},
+//     {id: 12, name: 'vidhi', gender: 'female'},
+// ]
 
-const [{id, name, gender}, user2, user3] = myDetail; 
+// const [{id, name, gender}, user2, user3] = myDetail; 
 
-// const {id, name, gender} = user1;
+// // const {id, name, gender} = user1;
 
-// console.log(user1);
-console.log(user2);
-console.log(user3);
+// // console.log(user1);
+// console.log(user2);
+// console.log(user3);
 
-console.log(`My id is ${id}, name is ${name}, and gender is ${gender}.`);
+// console.log(`My id is ${id}, name is ${name}, and gender is ${gender}.`);

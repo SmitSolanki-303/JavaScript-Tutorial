@@ -10,7 +10,7 @@
 // names.forEach(function(name, index) {
 //     console.log(`${name} and its index number is ${index}.`);
 // })
-
+ 
 // const users = [
 //     {name: "Smit" , age: 22},
 //     {name: "Ashay" , age: 21},
@@ -216,8 +216,8 @@
 // 10 - Splice Method
 // Theory - Splice method is used to insert or delete any any element between the array. In splice the process should be follow splice(start, delete(in number), insert(value thats need to be inserted after delete)). Here, starting would be index number of array, number of element you want to delete from array in number, and insert any element after delertion.
 
-const myArray = ["dog", "lion", "tiger", "cat"];
+// const myArray = ["dog", "lion", "tiger", "cat"];
 
-myArray.splice(1, 2);
+// myArray.splice(1, 2);
 
-console.log(myArray);
+// console.log(myArray);

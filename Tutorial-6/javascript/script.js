@@ -105,27 +105,35 @@
 //     }
 // }
 
-function createUser(firstName, lastName, email, age, address) {
-    const user = {
-        firstName: firstName,
-        lastName: lastName,
-        email: email,
-        age: age,
-        address: address,
-        about: function() {
-        return `${firstName} ${lastName} is ${age} years old.`;
-        },
-        is18 : function() {
-            return age >= 18;
-        }
-    }
+const userMethods = {
+    aboutMe : function(){
+        return `${this.firstName} ${this.lastName} is ${this.age} years old.`;
+    },
 
+    is18 : function(){
+        return this.age >= 18;  
+    }
+}
+
+function createUser(firstName, lastName, email, age, address) {
+    const user = {}
+     
+    user.firstName = firstName;
+    user.lastName = lastName;
+    user.email = email;
+    user.age = age;
+    user.address = address;
+    user.about = userMethods.aboutMe;
+    // user.is18 = userMethods.is18;
     return user;
 }
 
 const user1 = createUser("Smit", "Solanki", "smit-test@gmail.com", 22, "Surat, Gujarat")
 
+const user2 = createUser("Aditya", "singh", "adi@gmail.com", 20, "Surat, India");
+
 console.log(user1.about());
+console.log(user2.about());
 
 // 6 - Short syntax for method
 
