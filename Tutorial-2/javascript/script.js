@@ -91,6 +91,10 @@
 // let array2 = [...array1, ...extraArray, "oranges"];
 // console.log(array2);
 
+
+
+
+
 // 4 - For loop in Array
 
 // let array1 = ["apple", "mango","grapes"];
