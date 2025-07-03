@@ -1,9 +1,5 @@
 // 1 - if else
 
-// let winningNumber = 20;
-
-
-
 //  if else
 
 // let temp = -1
