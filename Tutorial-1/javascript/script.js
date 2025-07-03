@@ -2,17 +2,7 @@
 
 // let winningNumber = 20;
 
-// let userNumber = +prompt("Enter your guess between (1 to 20)");
 
-// if (userNumber === winningNumber) {
-//     console.log("Your guessed number is right.");
-// } else if (userNumber >= 15 ) {
-//     console.log("your number is very close.");
-// } else if (userNumber <= 15) {
-//     console.log("your number is too low.");
-// } else {
-//     console.log("Your guess is wrong");
-// }
 
 //  if else
 

@@ -1,115 +1,158 @@
-// Methods
+// 1 - Methods
+// 2 - this keyword
 
+// Theory - Function() inside object is called method. Here, 'this' keyword refer to the object itself(that is 'person' object).
 
+// In function, this will recognized to that object that is calling the functon. Example- person1.description() will refer to person1 object and this will refer to person1 object inside the function.
 
+// function aboutMe(){
+//     console.log(`My name is ${this.name} and I am ${this.age} years old.`);
+// }
 
+// const person1 = {
+//     name: "Smit",
+//     age: 22,
+//     description: aboutMe,
+// }
 
-// this keyword
+// const person2 = {
+//     name: "Aditya",
+//     age: 20,
+//     description: aboutMe,
+// }
 
+// person1.description();
+// person2.description()
 
 
 
 
-// call, apply, bind
 
+// 3 - call, apply, bind
+// Theory - '
+ 
 
+// // call() - It is used to call a function with a given 'this' value and arguments provided individually.
 
+// console.log("Using call() method:");
+//  function aboutMe(gender = 'male') {
+//     console.log(`My name is ${this.name} and I am ${this.age} years old and gender is ${gender}.`);
+//   }
 
+// const person1 = {
+//   name: "Smit",
+//   age: 22,
+//   description: aboutMe
+// };
 
-// some warning
+// const person2 = {
+//   name: "Aditi",
+//   age: 20,
+// };
 
+// person1.description();
+// person1.description.call(person2, "female")
 
 
 
 
-// this keyword inside arrow function
+// apply() - It is similar to call() but it takes an array as second argument instead of individual arguments.
 
+// console.log("Using apply() method:");
+// function aboutMe(hobby, gender) {
+//     console.log(`My name is ${this.name} and I am ${this.age} years old. I am ${gender} and I like ${hobby}.`);
+// }
 
+// const user1 = {
+//     name: "Smit",
+//     age: 22,
+// }
 
+// aboutMe.apply(user1, ["coding", "male"])
 
 
-// Short syntax for method
+// bind() - It is used to create a new function that, when called, has its 'this' keyword set to the provided value, with a given sequence of arguments preceding any provided when the new function is called.
 
+// console.log("Using bind() method:");
+ 
+// function aboutMe(hobby, gender) {
+//     console.log(`My name is ${this.name} and I am ${this.age} years old. I am ${gender} and I like ${hobby}.`);
+// }
+// const user1 = {
+//     name: "Smit",
+//     age: 22,
+// }
 
+// const bindFunc = aboutMe.bind(user1, "coding", "male");
 
+// bindFunc()
 
 
-// Factory function & Discuss some memory related problem
 
+// 5 - this keyword inside arrow function
 
+// const person = {
+//     firstName: "Smit",
+//     lastName: "Solanki",
+//     email: "smit-test@gmail.com",
+//     age: 22,
+//     address: "Surat, Gujarat",
+//     about: function() {
+//         return `${this.firstName} ${this.lastName} is ${this.age} years old.`;
+//     },
+//     is18 : function() {
+//         return this.age >= 18;
+//     }
+// }
 
+function createUser(firstName, lastName, email, age, address) {
+    const user = {
+        firstName: firstName,
+        lastName: lastName,
+        email: email,
+        age: age,
+        address: address,
+        about: function() {
+        return `${firstName} ${lastName} is ${age} years old.`;
+        },
+        is18 : function() {
+            return age >= 18;
+        }
+    }
 
+    return user;
+}
 
-// First solution of that problem
+const user1 = createUser("Smit", "Solanki", "smit-test@gmail.com", 22, "Surat, Gujarat")
 
+console.log(user1.about());
 
+// 6 - Short syntax for method
 
+// 7 - Factory function & Discuss some memory related problem
 
+// 8 - First solution of that problem
 
-// What is __proto__[{prototype}]
+// 9 - What is __proto__[{prototype}]
 
+// 10 - What is prototype
 
+// 11 - Use Prototype
 
+// 12 - New keyword
 
+// 13 - Constructor function with new keyword
 
-// What is prototype
+// 14 - More discussion about proto and prototype
 
+// 15 - class keyword
 
+// 16 - example of class keyword
 
+// 17 - super keyword
 
+// 18 - method overriding
 
-// Use Prototype
+// 19 - Getter & Setter
 
-
-
-
-
-// New keyword
-
-
-
-
-
-// Constructor function with new keyword
-
-
-
-
-
-// More discussion about proto and prototype
-
-
-
-
-
-// class keyword
-
-
-
-
-
-// example of class keyword
-
-
-
-
-
-// super keyword
-
-
-
-
-
-// method overriding
-
-
-
-
-
-// Getter & Setter
-
-
-
-
-
-// Static method and properties
+// 20 - Static method and properties
