@@ -28,7 +28,7 @@
 // console.log(this); 
 // console.log("myFunction() is already been hoisted");
 // myFunction();
-console.log(window);
+// console.log(window);
 // console.log(myFunction);
 // console.log(fullName);
 // function myFunction() {
@@ -46,35 +46,34 @@ console.log(window);
 // 5 - Are let and const are hoisted? What is reference error?
 
    
-console.log(myName);
-let  myName = 'Smit Solanki';
-console.log(myName);
+// console.log(myName);
+// let  myName = 'Smit Solanki';
+// console.log(myName);
 
 
  
 
-// TDZ - Temporal Dead Zone - It 
+// TDZ - Temporal Dead Zone - It is the time between the declaration of a variable and its initialization. During this time, if you try to access the variable, you will get a ReferenceError.
 
 
-// 6 - Function execution context
-
-
-
-
-
-// 7 - Scope chain & lexical environment
-
-
-
-
-
-// 8 - Intro to closure
-
-
-
-
+// 6 - Function execution context - 
 
 // 9 - Closuer Ex1
+
+
+
+// let foo = 'foo';
+// console.log(foo);
+// function getFullName(fname, lname) {
+//     console.log(arguments);
+//     let myVar = 'var inside function';
+//     console.log(myVar);
+//     const fullName = fname + ' ' + lname;
+//     return fullName;
+// }
+
+// const personName = getFullName("Smit", "Solanki");
+// console.log(personName);
 
 
 
@@ -82,12 +81,15 @@ console.log(myName);
 
 // 10 - Closure Ex2
 
+const lname = 'Solanki';
+const printName = function() {
+    const fname = 'Smit';
+    console.log(fname);
+    console.log(lname);
+}
 
+printName()
 
-
-
-// 11 - Closure Ex3
-
-
+// Here, lname dont have value in local memory of printName function, but it is still able to access lname variables value from the global execution context. This is because of closure.
 
 
