@@ -107,6 +107,7 @@ section, header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 10px
 }
 .todo-btn {
   /* min-height: 100%; */

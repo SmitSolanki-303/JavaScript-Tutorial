@@ -83,7 +83,27 @@
 
 
 // innerHTML - 
-const sectionTitle = document.querySelector("#section-title");
-sectionTitle.innerHTML = "<h1>Value changed from JavaScript</h1>";
-sectionTitle.innerHTML += "<button class=\"btn\">Button</button>"
-console.log(sectionTitle.innerHTML);
+// const sectionTitle = document.querySelector("#section-title");
+// sectionTitle.innerHTML = "<h1>Value changed from JavaScript</h1>";
+// sectionTitle.innerHTML += "<button class=\"btn\">Button</button>"
+// console.log(sectionTitle.innerHTML);
+
+
+
+ 
+// Class
+// const todoList = document.getElementsByClassName("todo-list");
+
+// const todoList = document.querySelector(".todo-list");
+
+// todoList.innerHTML += "<li>Tutorial 1</li>"
+// todoList.innerHTML += "<li>Tutorial 2</li>"
+// console.log(todoList);
+
+
+
+
+// document.createElement 
+
+const newTodoItem = document.createElement("li");
+console.log(newTodoItem);
