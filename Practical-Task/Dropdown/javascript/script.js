@@ -18,6 +18,9 @@ serviceSelected.addEventListener("mouseleave", function () {
   console.log("mouse leave");
 });
 
+
+
+// Select Dropdown
 var languageSelect = document.querySelector(".select-dropdown");
 var selectDropDown = document.querySelector(".select-dropdown-list");
 // console.log(selectDropDown);
@@ -45,6 +48,8 @@ for (let language of languageItem) {
 }
 
 
+
+
 // Toast 
 var heroBtn = document.querySelector("#heroBtn");
 var toastMessage = document.querySelector(".toast-message");
@@ -62,3 +67,16 @@ heroBtn.addEventListener("click", ()=>{
     toastMessage.classList.remove("toast-message-show")
   },3000);
 })
+
+
+
+// Accordian
+// var accordian = document.querySelector(".accordian");
+// var accordianSelect = document.querySelector(".accordian-head");
+
+// if(accordian.style.maxHeight) {
+//   accordian.style.maxHeight = '53px';
+// }
+// else {
+//   accordian.style.maxHeight = accordian.scrollHeight + 'px';
+// }
