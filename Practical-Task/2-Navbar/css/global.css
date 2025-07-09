@@ -49,7 +49,7 @@ body {
 }
 
 .header-wrapper {
-    /* padding-block: 16px; */
+    padding-block: 16px;
     display: flex;
     justify-content: space-around;
     align-items: center;
