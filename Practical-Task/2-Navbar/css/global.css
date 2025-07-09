@@ -63,7 +63,7 @@ body {
     gap: 40px;
 }
 
-.nav-item a{
+.nav-item a {
     text-decoration: none;
     font-size: 18px;
     color: var(--color-white)
@@ -72,40 +72,20 @@ body {
 
 
 /* Hamburger */
-.hamburger-section {
-    display: flex;
-    justify-content: space-between;
-    padding-block: 16px;
-    align-items: center;
-}
-
 .hamburger-menu {
     display: none;
-    font-size: 30px;
-    color: var(--secondary-color);
-    cursor: pointer;
 }
 
 
 .collapse-header {
     display: none;
-    max-height: 0;
-    transition: max-height 0.3s ease;
 
 }
 
 .collapse-links {
-    list-style: none;
     display: none;
-    padding-top: 16px;
-    padding-bottom: 16px;
 }
 
-.collapse-item a{
-    text-decoration: none;
-    font-size: 20px;
-    color: var(--color-white)
-}
 
 
 /* Responsive Breakpoints */
@@ -124,22 +104,42 @@ body {
         display: none;
     }
 
-    .hamburger-section {
-        width: 100%;
 
+    .hamburger-section {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        padding-block: 16px;
+        align-items: center;
     }
 
     .hamburger-menu {
         display: block;
+        font-size: 30px;
+        color: var(--secondary-color);
+        cursor: pointer;
     }
 
-    .collapse-header{
+    .collapse-header {
         display: block;
+        max-height: 0;
+        transition: max-height 0.3s ease;
+
     }
 
     .collapse-links {
         display: flex;
         flex-direction: column;
-        gap: 15px
+        gap: 15px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        list-style: none;
     }
+
+    .collapse-item a {
+        text-decoration: none;
+        font-size: 20px;
+        color: var(--color-white)
+    }
+
 }
