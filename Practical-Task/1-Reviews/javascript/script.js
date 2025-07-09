@@ -15,6 +15,7 @@ var surpriseBtn = document.querySelector(".primary-btn");
 // Select the first user
 let firstIndex = 0;
 
+
 function updateData(info) {
   userImage.src = info.userImage;
   infoTitle.textContent = info.fullname;

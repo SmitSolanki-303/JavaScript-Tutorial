@@ -35,6 +35,7 @@ body {
 .btn {
     font-size: 16px;
     font-weight: 500;
+    text-align: center;
     padding: 10px;
     border: 1px solid var(--color-white);
     border-radius: 50px;
@@ -49,7 +50,7 @@ body {
 }
 
 .header-wrapper {
-    padding: 16px 20px;
+    padding: 16px 100px;
 }
 
 .hamburger-menu {
@@ -65,13 +66,16 @@ body {
     position: absolute;
     top:0;
     left:0;
-    height: 200px;
-    width: 20%;
+    height: 100%;
+    width: 15%;
     padding: 50px;
     border-bottom-right-radius: 50px;
     border-top-right-radius: 50px;
     display: flex;
     flex-direction: column;
+    gap: 40px;
+    transition: 0.4s all ease-in-out;
+    transform: translateX(-300px);
 }
 
 .sidebar-head{
@@ -82,4 +86,35 @@ body {
 .close-menu{
     font-size: 30px;
     color: var(--secondary-color);
+    cursor: pointer;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.nav-item a {
+    text-decoration: none;
+    font-size: 24px;
+    color: var(--color-white)
+}
+
+.nav-item:hover a{
+    color: var(--secondary-color);
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+.btn-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+
+.btn:hover {
+    background-color: var(--secondary-color);
+    color: var(--color-black);
+    border: 1px solid var(--color-black);
 }
