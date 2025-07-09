@@ -1,0 +1,141 @@
+:root {
+    --primary-color: #37333d;
+    --secondary-color: #dba940;
+    --accent-color: #64647c;
+    --color-black: #000;
+    --color-white: #fff;
+
+
+    --container-width: 1320px;
+    --font-roboto: 'Roboto', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    font-family: var(--font-roboto);
+    overflow-x: hidden;
+    background-color: var(--primary-color);
+    color: var(--color-white);
+}
+
+/* Reusable class */
+.container {
+    max-width: var(--container-width);
+    width: 100%;
+    padding-inline: 16px;
+    margin: 0 auto;
+}
+
+.btn {
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: transparent;
+    color: var(--color-black);
+}
+
+
+.review-section {
+    padding-block: 100px;
+}
+
+.section-wrapper {
+    max-width: 660px;
+    margin: 0 auto;
+}
+
+.section-head {
+    margin-bottom: 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 40px;
+    letter-spacing: 2px;
+}
+
+.section-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid black;
+    background-color: var(--secondary-color);
+}
+
+.review-image {
+    aspect-ratio: 1 / 1;
+
+}
+
+.avatar-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 100px;
+}
+
+.review-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.info-title {
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 1px;
+    /* color: var(--); */
+}
+
+.info-role {
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    color: var(--accent-color);
+    
+}
+
+.info-desc {
+    text-align: center;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.review-btn-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.arrow-icon-wrapper {
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.fa-angle-left,
+.fa-angle-right {
+    font-size: 24px;
+    color: var(--accent-color);
+
+}
+
+.primary-btn {
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+}
