@@ -128,11 +128,11 @@ body {
     justify-content: space-evenly;
 }
 
-.fa-angle-left,
-.fa-angle-right {
+.prev-btn, .next-btn {
     font-size: 24px;
     color: var(--accent-color);
-
+    background-color: transparent;
+    border: 0px;
 }
 
 .primary-btn {
