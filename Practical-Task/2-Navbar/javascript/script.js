@@ -5,7 +5,10 @@ var collapseLinks = document.querySelector(".collapse-links");
 hamburgerMenu.addEventListener("click", function () {
   if (collapseHeader.style.maxHeight) {
     collapseHeader.style.maxHeight = null;
+    collapseHeader.style.display = "none";
+
   } else {
+    collapseHeader.style.display = "inline-block";
     collapseHeader.style.maxHeight = collapseHeader.scrollHeight + "px";
   }
 });

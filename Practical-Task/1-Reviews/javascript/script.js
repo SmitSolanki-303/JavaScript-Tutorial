@@ -25,7 +25,6 @@ function updateData(info) {
 }
 
 function updateButtons() {
-
   // previous button
   if (currentItem === 0) {
     prevBtn.classList.add("disabled");
@@ -47,6 +46,7 @@ function updateButtons() {
 
 // Using DOMContentLoaded, our first dynamic data would be access in HTML file.
 window.addEventListener("DOMContentLoaded", function () {
+
   updateData(userData[currentItem]);
   updateButtons();
 
