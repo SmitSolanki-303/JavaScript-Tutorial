@@ -16,6 +16,10 @@ var surpriseBtn = document.querySelector(".primary-btn");
 // Select the first user
 let currentItem = 0;
 
+// for disabling the icon
+var attr = document.createAttribute("class");
+attr.value = "disabled";
+
 function updateData(info) {
   userImage.src = info.userImage;
   infoTitle.textContent = info.fullname;
@@ -24,52 +28,59 @@ function updateData(info) {
   background.style.background = info.bgColor;
 }
 
-function updateButtons() {
-  // previous button
-  if (currentItem === 0) {
-    prevBtn.classList.add("disabled");
-    prevBtn.disabled = true;
-  } else {
-    prevBtn.classList.remove("disabled");
-    prevBtn.disabled = false;
-  }
-
-  // next button
-  if (currentItem === userData.length - 1) {
-    nextBtn.classList.add("disabled");
-    nextBtn.disabled = true;
-  } else {
-    nextBtn.classList.remove("disabled");
-    nextBtn.disabled = false;
-  }
-}
-
 // Using DOMContentLoaded, our first dynamic data would be access in HTML file.
 window.addEventListener("DOMContentLoaded", function () {
-
-  updateData(userData[currentItem]);
-  updateButtons();
+  // Getting the first index of user data
+  const info = userData[currentItem];
+  console.log(info);
+  updateData(info);
 
   prevBtn.addEventListener("click", function () {
-    if (currentItem > 0) {
-      currentItem--;
-      updateData(userData[currentItem]);
-      updateButtons();
+    currentItem--;
+
+    if (currentItem < 0) {
+        currentItem = userData.length-1;
     }
+
+    // console.log(currentItem);
+    const info = userData[currentItem];
+    console.log(info);
+
+    updateData(info);
   });
 
   nextBtn.addEventListener("click", function () {
-    if (currentItem < userData.length - 1) {
-      currentItem++;
-      updateData(userData[currentItem]);
-      updateButtons();
+    currentItem++;
+
+    if (currentItem >= userData.length) {
+      currentItem = 0;
     }
+
+    // console.log(currentItem);
+    const info = userData[currentItem];
+    console.log(info);
+
+    updateData(info);
   });
 
   surpriseBtn.addEventListener("click", function () {
-    let randomValue = Math.floor(Math.random() * userData.length);
-    currentItem = randomValue;
-    updateData(userData[randomValue]);
-    updateButtons();
+    // get the random value
+    let value = random(0, userData.length - 1);
+
+    // Convert the float value into integer value of random
+    let randomValue = parseInt(value);
+
+    for (let i = 0; i < userData.length; i++) {
+      if (i === randomValue) {
+        const info = userData[i];
+        console.log(info);
+
+        updateData(info);
+      }
+    }
   });
+
+  function random(min, max) {
+    return Math.random() * (max - min) + min;
+  }
 });

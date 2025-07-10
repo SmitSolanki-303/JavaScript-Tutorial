@@ -42,6 +42,7 @@ body {
     cursor: pointer;
     background-color: transparent;
     color: var(--color-white);
+    user-select: none;
 }
 
 .header {
