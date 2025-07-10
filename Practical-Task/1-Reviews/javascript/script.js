@@ -6,6 +6,7 @@ var userImage = document.querySelector(".avatar-image");
 var infoTitle = document.querySelector(".info-title");
 var infoRole = document.querySelector(".info-role");
 var infoDescription = document.querySelector(".info-desc");
+var background = document.querySelector(".section-body");
 
 // buttons
 var prevBtn = document.querySelector(".prev-btn");
@@ -13,72 +14,62 @@ var nextBtn = document.querySelector(".next-btn");
 var surpriseBtn = document.querySelector(".primary-btn");
 
 // Select the first user
-let firstIndex = 0;
-
+let currentItem = 0;
 
 function updateData(info) {
   userImage.src = info.userImage;
   infoTitle.textContent = info.fullname;
   infoRole.textContent = info.role;
   infoDescription.textContent = info.description;
+  background.style.background = info.bgColor;
+}
+
+function updateButtons() {
+
+  // previous button
+  if (currentItem === 0) {
+    prevBtn.classList.add("disabled");
+    prevBtn.disabled = true;
+  } else {
+    prevBtn.classList.remove("disabled");
+    prevBtn.disabled = false;
+  }
+
+  // next button
+  if (currentItem === userData.length - 1) {
+    nextBtn.classList.add("disabled");
+    nextBtn.disabled = true;
+  } else {
+    nextBtn.classList.remove("disabled");
+    nextBtn.disabled = false;
+  }
 }
 
 // Using DOMContentLoaded, our first dynamic data would be access in HTML file.
 window.addEventListener("DOMContentLoaded", function () {
-  const info = userData[firstIndex];
-  console.log(info);
-
-  updateData(info);
+  updateData(userData[currentItem]);
+  updateButtons();
 
   prevBtn.addEventListener("click", function () {
-    firstIndex--;
-
-    if (firstIndex == -1) {
-      firstIndex = 3;
+    if (currentItem > 0) {
+      currentItem--;
+      updateData(userData[currentItem]);
+      updateButtons();
     }
-
-    // console.log(firstIndex);
-    const info = userData[firstIndex];
-    console.log(info);
-
-    updateData(info);
   });
 
   nextBtn.addEventListener("click", function () {
-    firstIndex++;
-
-    if (firstIndex === 4) {
-      firstIndex = 0;
+    if (currentItem < userData.length - 1) {
+      currentItem++;
+      updateData(userData[currentItem]);
+      updateButtons();
     }
-
-    // console.log(firstIndex);
-    const info = userData[firstIndex];
-    console.log(info);
-
-    updateData(info);
   });
 
   surpriseBtn.addEventListener("click", function () {
-
-    // get the random value
-    let value = random(0, userData.length - 1);
-
-    // Convert the float value into integer value of random
-    let randomValue = parseInt(value);
-
-
-    for (let i = 0; i < userData.length; i++) {
-      if (i === randomValue) {
-
-        const info = userData[i];
-        console.log(info);
-
-        updateData(info);
-      }
-    }
+    let randomValue = Math.floor(Math.random() * userData.length);
+    currentItem = randomValue;
+    updateData(userData[randomValue]);
+    updateButtons();
   });
-
-  function random(min, max) {
-    return Math.random() * (max - min) + min;
-  }
 });
