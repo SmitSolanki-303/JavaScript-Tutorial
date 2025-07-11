@@ -1,0 +1,118 @@
+:root {
+    --primary-color: #49a6e9;
+
+    /* PRIMARY COLORS */
+    --primary-color-1: #0e1a26;
+    --primary-color-2: #1c2e40;
+    --primary-color-3: #2d455c;
+    --primary-color-4: #3e6380;
+    --primary-color-5: #4fa7db;
+    --primary-color-6: #87c3eb;
+    --primary-color-7: #a3d0ef;
+    --primary-color-8: #bde0f3;
+    --primary-color-9: #daf1fa;
+    --primary-color-10: #f3fbfe;
+
+    /* GREY COLORS */
+    --grey-color-1: #0f1a26;
+    --grey-color-2: #2e3a48;
+    --grey-color-3: #3d4c5c;
+    --grey-color-4: #4f6173;
+    --grey-color-5: #6f7d91;
+    --grey-color-6: #91a0b2;
+    --grey-color-7: #b0bdcb;
+    --grey-color-8: #ced9e1;
+    --grey-color-9: #e7edf3;
+    --grey-color-10: #f5f8fa;
+
+    --color-black: #222;
+    --color-white: #fff;
+    --transition: all 0.3 linear;
+
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+    --transition: all 0.3s ease-out;
+    --container-width: 1320px;
+    --font-roboto: 'Roboto', sans-serif;
+    --font-open: 'Open Sans', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* outline: 1px solid red;  */
+}
+
+body {
+    font-size: 16px;
+    font-family: var(--font-roboto);
+    background-color: var(--primary-color-10);
+}
+
+
+/* Reusable class */
+.container {
+    max-width: var(--container-width);
+    width: 100%;
+    padding-inline: 16px;
+    margin: 0 auto;
+}
+
+.btn {
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid var(--primary-color);
+    border-radius: 50px;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: transparent;
+    color: var(--primary-color);
+}
+
+
+/* Main Section */
+
+.section-wrapper {
+    margin: 0 auto;
+}
+
+.hero-background {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    aspect-ratio: 1880 / 895;
+}
+
+.hero-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.modal-box {
+    background-color: var(--color-white);
+    padding: 100px;
+    margin: 0 auto;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-title {
+    font-size: 80px;
+    text-align: center;
+}
+
+.primary-btn {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    background-color: var(--primary-color);
+    color: var(--color-white);
+    border-radius: 10px;
+}
