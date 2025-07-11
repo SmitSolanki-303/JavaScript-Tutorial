@@ -25,18 +25,42 @@
 <body>
     <main>
         <section>
-            <div class="container">
-                <div class="section-wrapper">
+            <div class="section-wrapper">
 
-                    <div class="hero-background">
-                        <img src="./assets/image/heroBackground1.jpg" class="hero-image">
-                    </div>
+                <div class="modal">
 
                     <div class="modal-box">
                         <h1 class="modal-title">Modal Project</h1>
-                        <a class="btn primary-btn">Open Modal</a>
+                        <a class="btn primary-btn" id="openModal">Open Modal</a>
                     </div>
+
                 </div>
+
+
+                <!-- Modal Overlay -->
+                <div class="modal-overlay" id="modalOverlay">
+
+                    <div class="overlay-modal-box">
+
+                        <div class="close-menu" id="closeModal">
+                            <i class="fa-solid fa-xmark"></i>
+                        </div>
+                        <div class="review-info">
+
+                            <h2 class="info-title">Smit Solanki</h2>
+                            <p class="info-role">Frontend Developer</p>
+
+                            <p class="info-desc">As a passionate and driven Web Developer, I specialize in creating
+                                visually engaging and user-friendly websites. With a robust foundation in front-end
+                                technologies like HTML, CSS, JavaScript, Bootstrap, React, and Tailwind CSS, I have
+                                successfully developed a range of web applications that prioritize seamless user
+                                experiences and functional design.</p>
+                        </div>
+                        
+                    </div>
+
+                </div>
+
             </div>
         </section>
     </main>
