@@ -17,7 +17,7 @@
     --color-black: #000;
     --color-white: #fff;
     --color-gold: #c59d5f;
-    
+
     --rgb-black: 0, 0, 0;
     --rgb-gray: 128, 128, 128;
 
@@ -88,8 +88,14 @@ section {
     margin-bottom: 48px;
 }
 
+.accordions {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 30px;
+}
+
 .accordion-box {
-    border: 1px solid black;
+    box-shadow: var(--dark-shadow);
     padding-inline: 20px;
     display: flex;
     flex-direction: column;
@@ -101,24 +107,20 @@ section {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    cursor: pointer;
     padding-block: 20px;
 }
 
 .fa-plus {
-    margin:0;
+    margin: 0;
     color: var(--color-gold);
     font-size: 24px;
+    transition: transform 0.3s ease-in-out;
 }
 
 .icon {
     border: 1px solid var(--color-gold);
     padding: 2px 4px;
-    cursor: pointer;
-    transition: var(--transition);
-}
-
-.icon:hover .fa-plus {
-    transform: rotate(45deg);
 }
 
 
@@ -129,11 +131,12 @@ section {
 
 .accordion-bottom {
     display: none;
-    border-top: 2px solid rgba(var(--rgb-gray), 0.5);
+    border-top: 1px solid rgba(var(--rgb-gray), 0.5);
     max-height: 0;
+    transition: max-height 0.3s ease-in-out;
+    overflow: hidden;
 }
 
 .accordion-desc {
     padding-block: 20px;
-
 }
