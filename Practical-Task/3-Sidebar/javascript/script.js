@@ -4,12 +4,12 @@ var closeMenu = document.querySelector(".close-menu");
 
 openMenu.addEventListener("click", function () {
   if (collapseHeader.style.transform == "translateX(0px)") {
-    collapseHeader.style.transform = "translateX(-300px)";
+    collapseHeader.style.transform = "translateX(-400px)";
   } else {
     collapseHeader.style.transform = "translateX(0px)";
   }
 });
 
 closeMenu.addEventListener("click", function () {
-  collapseHeader.style.transform = "translateX(-300px)";
+  collapseHeader.style.transform = "translateX(-400px)";
 });

@@ -5,12 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sidebar - JS Task 3</title>
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&display=swap" rel="stylesheet">
+
+    <!-- CSS file -->
     <link rel="stylesheet" href="./css/global.css">
 
+    <!-- JS file -->
     <script type="module" src="./javascript/script.js"></script>
 </head>
 
@@ -26,7 +34,7 @@
                 <div class="collapse-sidebar">
                     <div class="sidebar-head">
                         <div class="logo-container">
-                            <img src="./assets/image/Logo.png" class="logo-img">
+                            <a href="#"><img src="./assets/image/logo.svg" class="logo-img"></a>
                         </div>
 
                         <div class="close-menu">
@@ -36,17 +44,41 @@
 
                     <nav class="sidebar-body">
                         <ul class="nav-links">
-                            <li class="nav-item"><a href="#" class="anchor-item">Home</a></li>
-                            <li class="nav-item"><a href="#" class="anchor-item">About</a></li>
-                            <li class="nav-item"><a href="#" class="anchor-item">Projects</a></li>
-                            <li class="nav-item"><a href="#" class="anchor-item">Contact</a></li>
+                            <li class="nav-item"><a href="#home" class="anchor-item">Home</a></li>
+                            <li class="nav-item"><a href="#about" class="anchor-item">About</a></li>
+                            <li class="nav-item"><a href="#project" class="anchor-item">Projects</a></li>
+                            <li class="nav-item"><a href="#contact" class="anchor-item">Contact</a></li>
                         </ul>
                     </nav>
 
-                    <div class="btn-wrapper">
-                        <a class="btn">Sign In</a>
-                        <a class="btn">Sign Up</a>
-                    </div>
+
+                    <ul class="social-icons">
+                        <li class="social-links">
+                            <a href="https://www.facebook.com" class="anchor-icon">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li class="social-links">
+                            <a href="https://www.twitter.com" class="anchor-icon">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="social-links">
+                            <a href="https://www.behance.net" class="anchor-icon">
+                                <i class="fab fa-behance"></i>
+                            </a>
+                        </li>
+                        <li class="social-links">
+                            <a href="https://www.linkedin.com" class="anchor-icon">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </li>
+                        <li class="social-links">
+                            <a href="https://www.sketch.com" class="anchor-icon">
+                                <i class="fab fa-sketch"></i>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -64,13 +96,14 @@
 
                     <div class="section-body">
                         <div class="review-image">
+                            <div class="circle">”</div>
                             <img src="./assets/image/userImage4.jpg" class="avatar-image">
                         </div>
 
                         <div class="review-info">
                             <!-- Text Info -->
                             <h2 class="info-title">Aditya Singh</h2>
-                            <p class="info-role">Backend Developer</p>
+                            <p class="info-role">Frontend Developer</p>
 
                             <p class="info-desc">As a passionate and driven Web Developer, I specialize in creating
                                 visually engaging and user-friendly websites. With a robust foundation in front-end
