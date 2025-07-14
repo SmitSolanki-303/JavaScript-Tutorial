@@ -1,11 +1,33 @@
 import menuData from "./menuData.js";
 
-var menuWrapper = document.querySelector(".menu-item-wrapper");
-
+const menuWrapper = document.querySelector(".menu-item-wrapper");
+const filterButtons = document.querySelectorAll(".btn");
 console.log(menuWrapper);
 
+// Load all Menu Items
 document.addEventListener("DOMContentLoaded", function () {
   displayMenuItems(menuData);
+});
+
+// Load the Menu Items according to the filter
+filterButtons.forEach(function (button) {
+  button.addEventListener("click", function (e) {
+    const btnCategory = e.currentTarget.dataset.category;
+    console.log(btnCategory);
+    const menuCategory = menuData.filter(function (menuData) {
+      if (btnCategory === "lunch") {
+        return menuData.category === btnCategory;
+      } else if (btnCategory === "breakfast") {
+        return menuData.category === btnCategory;
+      } else if (btnCategory === "shakes") {
+        return menuData.category === btnCategory;
+      } else {
+        return menuData;
+      }
+    });
+    console.log(menuCategory);
+    displayMenuItems(menuCategory);
+  });
 });
 
 function displayMenuItems(menuData) {
@@ -28,7 +50,7 @@ function displayMenuItems(menuData) {
               </div>
             </div>`;
   });
-  
+
   // "" - is used as a separator between each element in the array. Here it is ".menu-item"
   displayMenu = displayMenu.join("");
   // console.log(displayMenu);
