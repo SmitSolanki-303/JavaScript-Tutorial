@@ -4,16 +4,17 @@ document.addEventListener("DOMContentLoaded", function () {
   accordionTop.forEach((accordion) => {
     // console.log(accordion);
     accordion.addEventListener("click", function (e) {
-      var current = e.currentTarget.parentElement;
 
       var icon = accordion.querySelector(".fa-plus");
       var content = accordion.nextElementSibling;
       // icon.style.transform = "rotate(135deg)";
       console.log(content);
 
-      if (content.style.display == "block") {
+      var isVisible = content.style.display === "block";
+
+      if (isVisible) {
         icon.style.transform = "rotate(0deg)";
-        content.style.display = "";
+        content.style.display = "none";
       } else {
         icon.style.transform = "rotate(135deg)";
         content.style.display = "block";

@@ -140,3 +140,13 @@ section {
 .accordion-desc {
     padding-block: 20px;
 }
+
+/* Active state */
+.accordion-box.active .accordion-top {
+    background-color: var(--primary-color-7);
+}
+
+.accordion-box.active .icon {
+    background-color: var(--primary-color-2);
+    transform: rotate(45deg);
+}
