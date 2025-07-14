@@ -62,6 +62,7 @@ body {
     border: 1px solid var(--color-gold);
     border-radius: 10px;
     text-decoration: none;
+    text-transform: capitalize;
     cursor: pointer;
     background-color: transparent;
     color: var(--color-gold);
@@ -102,7 +103,8 @@ section {
 .filter-btn-wrapper {
     display: flex;
     gap: 10px;
-
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .btn:hover {
@@ -119,7 +121,8 @@ section {
 }
 
 .menu-item {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 10px;
 }
 
@@ -149,6 +152,7 @@ section {
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid var(--color-gold);
+    padding-bottom: 5px;
 }
 
 .food-title {
@@ -160,9 +164,88 @@ section {
 }
 
 .food-price {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
     color: var(--color-gold);
     letter-spacing: 2px;
 
 }
+
+
+/* Responsive Breakpoints */
+@media only screen and (max-width: 575px) {
+
+    .btn {
+        font-size: 14px;
+    }
+
+
+    .menu-item-wrapper {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+    }
+
+    .menu-item {
+        grid-template-columns: repeat(1, 1fr);
+        align-items: center;
+    }
+
+    .food-title {
+        font-size: 18px;
+        letter-spacing: 2px;
+    }
+
+    .food-price {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+   
+    .btn {
+        font-size: 14px;
+    }
+
+
+    .menu-item-wrapper {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+    }
+
+    .menu-item {
+        align-items: center;
+    }
+
+    .food-title {
+        font-size: 18px;
+        letter-spacing: 2px;
+    }
+
+    .food-price {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (min-width:769px) and (max-width: 1024px) {
+
+
+    .menu-item-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .menu-item {
+        align-items: center;
+    }
+
+    .food-title {
+        font-size: 18px;
+        letter-spacing: 2px;
+    }
+
+    .food-price {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {}

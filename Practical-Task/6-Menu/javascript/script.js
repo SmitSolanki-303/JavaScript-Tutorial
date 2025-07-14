@@ -1,34 +1,60 @@
 import menuData from "./menuData.js";
 
 const menuWrapper = document.querySelector(".menu-item-wrapper");
-const filterButtons = document.querySelectorAll(".btn");
-console.log(menuWrapper);
+const buttonWrapper = document.querySelector(".filter-btn-wrapper");
+
+
 
 // Load all Menu Items
 document.addEventListener("DOMContentLoaded", function () {
   displayMenuItems(menuData);
+  displayButtons();
 });
 
-// Load the Menu Items according to the filter
-filterButtons.forEach(function (button) {
+
+// Display Filter Buttons
+function displayButtons() {
+  const categories = menuData.map(function (menuData) {
+    return menuData.category;
+  });
+
+  // console.log(categories);
+  const uniqueCategories = ["all", ...new Set(categories)];
+  // console.log(uniqueCategories);
+
+  var filterBtn = uniqueCategories.map(function (unique) {
+    return `<a class="btn" data-category=${unique}>${unique}</a>`;
+  });
+
+  // console.log(filterBtn);
+  filterBtn = filterBtn.join("");
+  buttonWrapper.innerHTML = filterBtn;
+
+  const filterButtons = document.querySelectorAll(".btn");
+
+  filterButtons.forEach(function (button) {
   button.addEventListener("click", function (e) {
     const btnCategory = e.currentTarget.dataset.category;
     console.log(btnCategory);
+
     const menuCategory = menuData.filter(function (menuData) {
-      if (btnCategory === "lunch") {
-        return menuData.category === btnCategory;
-      } else if (btnCategory === "breakfast") {
-        return menuData.category === btnCategory;
-      } else if (btnCategory === "shakes") {
-        return menuData.category === btnCategory;
-      } else {
+
+      if(btnCategory === menuData.category) {
         return menuData;
       }
     });
-    console.log(menuCategory);
-    displayMenuItems(menuCategory);
+
+    if(btnCategory === "all"){
+      displayMenuItems(menuData);
+    } else {
+      displayMenuItems(menuCategory);
+    }
   });
 });
+}
+
+// Load the Menu Items according to the filter
+
 
 function displayMenuItems(menuData) {
   let displayMenu = menuData.map(function (item) {
@@ -40,8 +66,8 @@ function displayMenuItems(menuData) {
 
               <div class="food-info-box">
                   <div class="info-top">
-                      <h2 class="food-title">${item.title}</h2>
-                      <p class="food-price">${item.price}</p>
+                      <p class="food-title">${item.title}</p>
+                      <p class="food-price">$${item.price}</p>
                   </div>
 
                   <div class="info-bottom">
