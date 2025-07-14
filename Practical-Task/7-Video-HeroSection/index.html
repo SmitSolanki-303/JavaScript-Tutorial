@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Hero Background - JS Task 7</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+    <!-- CSS file -->
+    <link rel="stylesheet" href="./css/global.css">
+
+    <!-- JS file -->
+    <script type="module" src="./javascript/script.js"></script>
+</head>
+
+<body>
+    <main>
+        <section class="hero-section">
+            <div class="container">
+                <div class="hero-wrapper">
+                    <div class="background-video">
+                        <video autoplay muted loop>
+                            <source src="./assets/video/video.mp4">
+                        </video>
+                    </div>
+
+                    <div class="hero-content">
+                        <h1 class="hero-title">Video Hero Section</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="review-section">
+            <div class="container">
+                <div class="section-wrapper">
+
+                    <div class="section-head">
+                        <h1 class="section-title">Our Reviews</h1>
+                    </div>
+
+                    <div class="section-body">
+                        <div class="review-image">
+                            <div class="circle">”</div>
+                            <img src="./assets/image/userImage4.jpg" class="avatar-image">
+                        </div>
+
+                        <div class="review-info">
+                            <!-- Text Info -->
+                            <h2 class="info-title">Smit Solanki</h2>
+                            <p class="info-role">Frontend Developer</p>
+
+                            <p class="info-desc">As a passionate and driven Web Developer, I specialize in creating
+                                visually engaging and user-friendly websites. With a robust foundation in front-end
+                                technologies like HTML, CSS, JavaScript, Bootstrap, React, and Tailwind CSS, I have
+                                successfully developed a range of web applications that prioritize seamless user
+                                experiences and functional design.</p>
+                        </div>
+
+                        <div class="review-btn-wrapper">
+                            <div class="arrow-icon-wrapper">
+                                <button class="prev-btn">
+                                    <i class="fa-solid fa-angle-left"></i>
+                                </button>
+
+                                <button class="next-btn">
+                                    <i class="fa-solid fa-angle-right"></i>
+                                </button>
+                            </div>
+                            <a class="btn primary-btn">Surprise Me</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
