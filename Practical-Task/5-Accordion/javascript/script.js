@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (content.style.display == "block") {
         icon.style.transform = "rotate(0deg)";
-        content.style.display = "none";
+        content.style.display = "";
       } else {
         icon.style.transform = "rotate(135deg)";
         content.style.display = "block";
