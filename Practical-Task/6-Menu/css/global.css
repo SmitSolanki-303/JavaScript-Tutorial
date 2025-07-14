@@ -117,12 +117,13 @@ section {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
-    gap: 20px;
+    row-gap: 20px;
+    column-gap: 30px;
 }
 
 .menu-item {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 10px;
 }
 
@@ -248,4 +249,4 @@ section {
     }
 }
 
-@media only screen and (min-width: 1025px) and (max-width: 1280px) {}
+/* @media only screen and (min-width: 1025px) and (max-width: 1280px) {} */
