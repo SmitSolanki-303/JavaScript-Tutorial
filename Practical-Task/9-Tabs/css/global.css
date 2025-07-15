@@ -1,0 +1,218 @@
+:root {
+    --primary-color: #49a6e9;
+    --rgb-primary-color: 73, 166, 233;
+
+    /* PRIMARY COLORS */
+    --primary-color-1: #0e1a26;
+    --primary-color-2: #1c2e40;
+    --primary-color-3: #2d455c;
+    --primary-color-4: #3e6380;
+    --primary-color-5: #4fa7db;
+    --primary-color-6: #87c3eb;
+    --primary-color-7: #a3d0ef;
+    --primary-color-8: #bde0f3;
+    --primary-color-9: #daf1fa;
+    --primary-color-10: #f3fbfe;
+
+    --color-black: #000;
+    --color-white: #fff;
+    --color-gold: #c59d5f;
+    --color-gray: #dae2ec;
+
+    --rgb-black: 0, 0, 0;
+    --rgb-gray: 128, 128, 128;
+
+    --overlay-black: rgba(0, 0, 0, 0.7);
+    --overlay-white: rgba(255, 255, 255, 0.5);
+    --overlay-hero: rgba(63, 208, 212, 0.5);
+
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+    --transition: all 0.4s ease-in-out;
+    --container-width: 1320px;
+
+    --font-roboto: 'Roboto', sans-serif;
+    --font-open: 'Open Sans', sans-serif;
+    --font-cursive: "Great Vibes", cursive;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* outline: 1px solid red;  */
+    scroll-behavior: smooth;
+    scroll-padding-top: 102px;
+    /* Adjust based on header height */
+}
+
+body {
+    font-size: 16px;
+    font-family: var(--font-open);
+    background-color: var(--primary-color-9);
+    /* transition: var(--transition); */
+}
+
+
+/* Reusable class */
+.container {
+    max-width: var(--container-width);
+    width: 100%;
+    padding-inline: 16px;
+    margin: 0 auto;
+}
+
+section {
+    /* height: 100vh; */
+    width: 100%;
+    /* scroll-margin-top: 82px; */
+    padding: 102px;
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
+}
+
+
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+
+/* Main Content */
+.section-head {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title {
+    font-size: 60px;
+    font-weight: bold;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    line-height: 1.2;
+    font-family: var(--font-roboto);
+}
+
+.section-description {
+    font-size: 20px;
+    line-height: 1.6;
+    width: 100%;
+}
+
+.body-wrapper {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+
+.image-container {
+    width: 50%;
+    height: auto;
+    aspect-ratio: 1288 / 881;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.tabs-wrapper {
+    width: 50%;
+    max-height: 434px;
+    height: 100%;
+    border: 1px solid var(--color-black);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    overflow: hidden;
+}
+
+.tabs-head {
+    display: flex;
+}
+
+.tab-button {
+    flex: 1;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 4px;
+    padding: 15px;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    cursor: pointer;
+    background-color: var(--color-gray);
+    color: var(--color-black);
+}
+
+.tab-button:hover {
+    color: var(--primary-color-5);
+    background-color: var(--primary-color-9);
+}
+
+.selected {
+    background-color: var(--color-white);
+    color: var(--color-black);
+}
+
+.tabs-body {
+    padding: 20px;
+    background-color: var(--color-white);
+    min-height: 300px;
+    height: auto;
+}
+
+.content {
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    animation: fade 0.3s ease-in-out;
+}
+
+.content.active {
+    display: flex;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.content-title {
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+.content-description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: rgba(var(--rgb-gray), 0.8);
+}
+
+.list {
+    list-style-type: none;
+    padding-left: 16px;
+}
