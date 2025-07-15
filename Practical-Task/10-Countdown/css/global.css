@@ -1,0 +1,95 @@
+:root {
+    --primary-color: #49a6e9;
+    --rgb-primary-color: 73, 166, 233;
+
+    /* PRIMARY COLORS */
+    --primary-color-1: #0e1a26;
+    --primary-color-2: #1c2e40;
+    --primary-color-3: #2d455c;
+    --primary-color-4: #3e6380;
+    --primary-color-5: #4fa7db;
+    --primary-color-6: #87c3eb;
+    --primary-color-7: #a3d0ef;
+    --primary-color-8: #bde0f3;
+    --primary-color-9: #daf1fa;
+    --primary-color-10: #f3fbfe;
+
+    /* SECONDARY COLORS */
+    --color-grey-1: #0f1e2a;
+    --color-grey-2: #243544;
+    --color-grey-3: #354956;
+    --color-grey-4: #4a5b6a;
+    --color-grey-5: #6c7a89;
+    --color-grey-6: #8a96a3;
+    --color-grey-7: #a9b3bf;
+    --color-grey-8: #c7d1dc;
+    --color-grey-9: #e3e9f0;
+    --color-grey-10: #f5f8fa;
+
+
+    --color-black: #000;
+    --color-white: #fff;
+    --color-gold: #c59d5f;
+    --color-gray: #dae2ec;
+
+    --rgb-black: 0, 0, 0;
+    --rgb-gray: 128, 128, 128;
+
+    --overlay-black: rgba(0, 0, 0, 0.7);
+    --overlay-white: rgba(255, 255, 255, 0.5);
+    --overlay-hero: rgba(63, 208, 212, 0.5);
+
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+    --transition: all 0.4s ease-in-out;
+    --container-width: 1320px;
+
+    --font-roboto: 'Roboto', sans-serif;
+    --font-open: 'Open Sans', sans-serif;
+    --font-cursive: "Great Vibes", cursive;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* outline: 1px solid red;  */
+    scroll-behavior: smooth;
+    scroll-padding-top: 102px;
+    /* Adjust based on header height */
+}
+
+body {
+    font-size: 16px;
+    font-family: var(--font-open);
+    background-color: var(--color-grey-9);
+    /* transition: var(--transition); */
+}
+
+
+/* Reusable class */
+.container {
+    max-width: var(--container-width);
+    width: 100%;
+    padding-inline: 16px;
+    margin: 0 auto;
+}
+
+section {
+    /* height: 100vh; */
+    width: 100%;
+    /* scroll-margin-top: 82px; */
+    padding: 102px;
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
+}
+
+
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
