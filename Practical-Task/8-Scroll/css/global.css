@@ -1,18 +1,11 @@
 :root {
-    --primary-color: #49a6e9;
-    --rgb-primary-color: 73, 166, 233;
+    --primary-color-1: #49a6e9;
 
-    /* PRIMARY COLORS */
-    --primary-color-1: #0e1a26;
-    --primary-color-2: #1c2e40;
-    --primary-color-3: #2d455c;
-    --primary-color-4: #3e6380;
-    --primary-color-5: #4fa7db;
-    --primary-color-6: #87c3eb;
-    --primary-color-7: #a3d0ef;
-    --primary-color-8: #bde0f3;
-    --primary-color-9: #daf1fa;
-    --primary-color-10: #f3fbfe;
+
+    --primary-color-2: #2d455c;
+    --primary-color-3: #f3fbfe;
+    --primary-color-4: #a3d0ef;
+
 
     --color-black: #000;
     --color-white: #fff;
@@ -31,9 +24,8 @@
     --transition: all 0.4s ease-in-out;
     --container-width: 1320px;
     
-    --font-roboto: 'Roboto', sans-serif;
     --font-open: 'Open Sans', sans-serif;
-    --font-cursive: "Great Vibes", cursive;
+
 }
 
 * {
@@ -48,7 +40,7 @@
 body {
     font-size: 16px;
     font-family: var(--font-open);
-    /* background-color: var(--primary-color-7); */
+    /* background-color: var(--primary-color-4); */
     /* transition: var(--transition); */
 }
 
@@ -68,7 +60,7 @@ section {
     padding-top: 102px;
     /* display: flex; */
     /* align-items: center; */
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px 0 var(--dark-shadow);
 }
 
 .btn {
@@ -106,7 +98,7 @@ section {
 }
 
 .scrolled {
-    background-color: var(--primary-color-9);
+    background-color: var(--color-white);
     box-shadow: var(--light-shadow);
     transition: var(--transition);
 }
@@ -220,7 +212,7 @@ section {
 
 .collapse-nav-link:hover {
     border: 1px solid var(--color-black);
-    /* background-color: var(--primary-color-9); */
+    /* background-color: var(--primary-color-4); */
     padding-left: 20px;
     
 }
@@ -314,7 +306,7 @@ section {
 }
 
 .about-section {
-    background-color: var(--primary-color-10);
+    background-color: var(--primary-color-3);
 
 }
 
@@ -323,7 +315,7 @@ section {
 }
 
 .tours-section {
-    background-color: var(--primary-color-10);
+    background-color: var(--primary-color-3);
 }
 
 
@@ -346,12 +338,12 @@ section {
 }
 
 .title-word {
-    color: var(--primary-color);
+    color: var(--primary-color-1);
 }
 
 /* Footer */
 .footer {
-    background-color: var(--primary-color-3);
+    background-color: var(--primary-color-2);
     padding: 48px 0;
 
 }
