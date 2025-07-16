@@ -143,8 +143,8 @@ section {
 .input-limit {
     font-size: 20px;
     height: 30px;
-    width: 80px;
-    padding: 5px;
+    width: 120px;
+    padding: 10px;
     border: 1px solid transparent;
     border-radius: 5px;
     text-align: center;
@@ -155,13 +155,13 @@ section {
     color: var(--color-white);
 }
 
-.data-box {
+.paragraph-box {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.data {
+.paragraph {
     font-size: 18px;
     color: var(--primary-color-4);
     text-align: center;
@@ -189,7 +189,7 @@ section {
         font-size: 14px;
     }
 
-    .data {
+    .paragraph {
         font-size: 16px;
     }
 
@@ -211,7 +211,7 @@ section {
         font-size: 16px;
     }
 
-    .data {
+    .paragraph {
         font-size: 18px;
     }
 
