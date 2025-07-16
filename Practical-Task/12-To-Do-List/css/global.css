@@ -1,21 +1,18 @@
 :root {
-    --primary-color: #49a6e9;
-    --rgb-primary-color: 73, 166, 233;
+    --color-blue-400: #49a6e9;
+    --color-blue-900: #0e1a26;
+    --color-blue-700: #3e6380;
 
-    /* PRIMARY COLORS */
-    --primary-color-1: #0e1a26;
-    --primary-color-2: #3e6380;
+    --color-gray-100: #e3e9f0;
+    --color-gray-200: #dae2ec;
 
-
-    --color-grey: #e3e9f0;
     --color-black: #000;
     --color-white: #fff;
-    --color-gray: #dae2ec;
-    --color-red: #C70039;
-    --color-green: #4CBB17;
+    --color-red-700: #C70039;
+    --color-green-600: #4CBB17;
 
-    --red-hover: #ff0000;
-    --green-hover: #00ff00;
+    --color-red-600: #dc2626;
+    --color-green-500: #22c55e;
 
     --rgb-black: 0, 0, 0;
     --rgb-gray: 128, 128, 128;
@@ -45,7 +42,7 @@
 body {
     font-size: 16px;
     font-family: var(--font-open);
-    background-color: var(--color-grey);
+    background-color: var(--color-gray-100);
     /* transition: var(--transition); */
 }
 
@@ -63,14 +60,14 @@ body {
     font-weight: 500;
     text-align: center;
     padding: 5px 10px;
-    border: 1px solid var(--primary-color);
+    border: 1px solid var(--color-blue-400);
     border-radius: 5px;
     text-decoration: none;
     text-transform: capitalize;
     cursor: pointer;
     background-color: transparent;
     color: var(--color-white);
-    background-color: var(--primary-color);
+    background-color: var(--color-blue-400);
     transition: var(--transition);
 }
 
@@ -130,10 +127,10 @@ section {
     width: 100%;
     border: 1px solid var(--color-black);
     border-radius: 5px;
-    color: var(--primary-color-2);
+    color: var(--color-blue-700);
 }
 .btn:hover {
-    background-color: var(--primary-color-2);
+    background-color: var(--color-blue-700);
     color: var(--color-white);
 }
 
@@ -169,7 +166,7 @@ section {
 }
 
 .todo-item:hover {
-    background-color: var(--color-grey);
+    background-color: var(--color-gray-100);
     color: var(--color-black);
 }
 
@@ -180,20 +177,20 @@ section {
 
 .fa-pen-to-square{
     cursor: pointer;
-    color: var(--color-green);
+    color: var(--color-green-600);
 }
 
 .fa-trash{
     cursor: pointer;
-    color: var(--color-red);
+    color: var(--color-red-700);
 }
 
 .fa-pen-to-square:hover {
-    color: var(--green-hover);
+    color: var(--color-green-500);
 }
 
 .fa-trash:hover {
-    color: var(--red-hover);
+    color: var(--color-red-600);
 }
 
 /* Alert */
@@ -201,7 +198,7 @@ section {
     width: 100%;
     text-align: center;
     letter-spacing: 2px;
-    background-color: var(--color-green);
+    background-color: var(--color-green-600);
     opacity: 0.7;
     font-weight: 500;
     font-size: 18px;
@@ -211,14 +208,14 @@ section {
 .remove-all{
     text-align: center;
     letter-spacing: 2px;
-    color: var(--color-red);
+    color: var(--color-red-700);
     cursor: pointer;
     transition: var(--transition);
 
 }
 
 .remove-all:hover {
-    color: var(--primary-color-2);
+    color: var(--color-blue-700);
 }
 
 
