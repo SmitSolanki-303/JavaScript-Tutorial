@@ -12,6 +12,8 @@
     --primary-color-7: #a3d0ef;
     --primary-color-8: #bde0f3;
     --primary-color-9: #daf1fa;
+    
+
     --primary-color-10: #f3fbfe;
 
     --color-black: #000;
@@ -27,8 +29,7 @@
     --transition: all 0.4s ease-in-out;
     --container-width: 1320px;
     --font-roboto: 'Roboto', sans-serif;
-    --font-open: 'Open Sans', sans-serif;
-    --font-cursive: "Great Vibes", cursive;
+
 }
 
 * {
