@@ -1,30 +1,17 @@
 :root {
-    --primary-color: #49a6e9;
-    --rgb-primary-color: 73, 166, 233;
-
-    /* PRIMARY COLORS */
     --primary-color-1: #0e1a26;
-    --primary-color-2: #1c2e40;
-    --primary-color-3: #2d455c;
-    --primary-color-4: #3e6380;
-    --primary-color-5: #4fa7db;
-    --primary-color-6: #87c3eb;
-    --primary-color-7: #a3d0ef;
-    --primary-color-8: #bde0f3;
-    --primary-color-9: #daf1fa;
-    
-
-    --primary-color-10: #f3fbfe;
+    --primary-color-2: #2d455c;
+    --primary-color-3: #4fa7db;
+    --primary-color-4: #87c3eb;
+    --primary-color-5: #a3d0ef;
+    --primary-color-6: #daf1fa;
+    --primary-color-7: #f3fbfe;
 
     --color-black: #000;
     --color-white: #fff;
     --color-gold: #c59d5f;
 
     --rgb-black: 0, 0, 0;
-    --rgb-gray: 128, 128, 128;
-
-    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 
     --transition: all 0.4s ease-in-out;
     --container-width: 1320px;
@@ -42,7 +29,7 @@
 body {
     font-size: 16px;
     font-family: var(--font-roboto);
-    background-color: var(--primary-color-10);
+    background-color: var(--primary-color-7);
 
 }
 
@@ -134,7 +121,7 @@ body {
     right: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(var(--rgb-black), 0.5);
     z-index: 0;
 }
 
@@ -225,7 +212,7 @@ body {
 .underline {
     width: 80px;
     height: 4px;
-    background-color: var(--primary-color-5);
+    background-color: var(--primary-color-3);
     margin: 0 auto
 }
 
@@ -252,7 +239,7 @@ body {
     position: absolute;
     height: 40px;
     width: 40px;
-    background-color: var(--primary-color-6);
+    background-color: var(--primary-color-4);
     color: var(--color-white);
     border-radius: 50px;
     font-size: 40px;
@@ -265,7 +252,7 @@ body {
     width: 100%;
     object-fit: cover;
     border-radius: 100px;
-    box-shadow: 12px 0px 0px var(--primary-color-6);
+    box-shadow: 12px 0px 0px var(--primary-color-4);
 }
 
 .review-info {
@@ -286,7 +273,7 @@ body {
     font-size: 20px;
     font-weight: 500;
     text-align: center;
-    color: var(--primary-color-5);
+    color: var(--primary-color-3);
 
 }
 
@@ -312,7 +299,7 @@ body {
 .prev-btn,
 .next-btn {
     font-size: 24px;
-    color: var(--primary-color-7);
+    color: var(--primary-color-5);
     background-color: transparent;
     border: 0px;
     cursor: pointer;
@@ -323,23 +310,23 @@ body {
 
 .prev-btn:hover,
 .next-btn:hover {
-    color: var(--primary-color-5);
+    color: var(--primary-color-3);
 }
 
 .prev-btn:focus,
 .next-btn:focus {
-    border: 2px solid var(--primary-color-5);
+    border: 2px solid var(--primary-color-3);
 }
 
 .primary-btn {
-    color: var(--primary-color-5);
-    border: 1px solid var(--primary-color-5);
+    color: var(--primary-color-3);
+    border: 1px solid var(--primary-color-3);
 }
 
 .primary-btn:hover {
-    color: var(--primary-color-3);
-    background-color: var(--primary-color-9);
-    border: 1px solid var(--primary-color-3);
+    color: var(--primary-color-2);
+    background-color: var(--primary-color-6);
+    border: 1px solid var(--primary-color-2);
 }
 
 
