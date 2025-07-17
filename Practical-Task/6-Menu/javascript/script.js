@@ -53,7 +53,7 @@ function displayButtons() {
     const btnCategory = e.currentTarget.dataset.category;
     console.log(btnCategory);
 
-    // Filter the menuData based on the category
+    // Filter the menuData based on the selected filter category
     const menuCategory = menuData.filter(function (menuData) {
 
       // console.log(menuData.category);
@@ -76,7 +76,7 @@ function displayButtons() {
 
 
 function displayMenuItems(menuData) {
-  
+
   let displayMenu = menuData.map(function (item) {
     // console.log(item);
     return `<div class="menu-item">
