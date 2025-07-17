@@ -153,6 +153,8 @@ body {
 .play, .pause {
     padding: 4px 8px;
 }
+
+/* Switch */
 .switch {
     position: absolute;
     top: 0;
@@ -166,6 +168,7 @@ body {
     transition: var(--transition);
 }
 
+/* JS onclick switch */
 .slide .switch {
     left: 50%;
 }
