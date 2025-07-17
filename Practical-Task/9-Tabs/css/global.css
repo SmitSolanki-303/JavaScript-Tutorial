@@ -1,6 +1,6 @@
 :root {
-    --primary-color-1: #4fa7db;
-    --primary-color-2: #daf1fa;
+    --blue-400: #4fa7db;
+    --blue-100: #daf1fa;
 
     --color-grey: #e3e9f0;
 
@@ -8,7 +8,6 @@
     --color-white: #fff;
     --color-gray: #dae2ec;
 
-    --rgb-black: 0, 0, 0;
     --rgb-gray: 128, 128, 128;
 
     --transition: all 0.4s ease-in-out;
@@ -142,8 +141,8 @@ section {
 }
 
 .tab-button:hover {
-    color: var(--primary-color-1);
-    background-color: var(--primary-color-2);
+    color: var(--blue-400);
+    background-color: var(--blue-100);
 }
 
 .selected {
