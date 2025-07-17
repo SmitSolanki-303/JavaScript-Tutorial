@@ -1,21 +1,16 @@
 :root {
-    --primary-color: #1c2e40;
-
-    --color-grey-1: #e3e9f0;
-    --color-grey-2: #8a96a3;
+    --blue-950: #1c2e40;
+    --gray-100: #e3e9f0;
+    --gray-400: #8a96a3;
 
     --color-black: #000;
     --color-white: #fff;
     --color-gray: #dae2ec;
 
-    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-
     --transition: all 0.4s ease-in-out;
     --container-width: 1320px;
 
     --font-open: 'Open Sans', sans-serif;
-
 }
 
 * {
@@ -31,7 +26,7 @@
 body {
     font-size: 16px;
     font-family: var(--font-open);
-    background-color: var(--color-grey-1);
+    background-color: var(--gray-100);
     /* transition: var(--transition); */
 }
 
@@ -84,7 +79,7 @@ section {
 .info-title {
     font-size: 36px;
     font-weight: bold;
-    color: var(--primary-color);
+    color: var(--blue-950);
 }
 
 .info-giveaway {
@@ -100,7 +95,7 @@ section {
     margin-top: 20px;
     font-size: 18px;
     line-height: 1.6;
-    color: var(--color-grey-2);
+    color: var(--gray-400);
 }
 
 .info-deadline {
@@ -113,7 +108,7 @@ section {
 .timer-box {
     height: 80px;
     width: 80px;
-    background-color: var(--primary-color);
+    background-color: var(--blue-950);
     color: var(--color-white);
     display: inline-flex;
     flex-direction: column;
