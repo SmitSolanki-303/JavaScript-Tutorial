@@ -1,17 +1,6 @@
 :root {
-    --primary-color: #49a6e9;
-    --rgb-primary-color: 73, 166, 233;
 
-    /* PRIMARY COLORS */
-    --primary-color-1: #0e1a26;
-    --primary-color-2: #1c2e40;
-    --primary-color-3: #2d455c;
-    --primary-color-4: #3e6380;
-    --primary-color-5: #4fa7db;
-    --primary-color-6: #87c3eb;
-    --primary-color-7: #a3d0ef;
-    --primary-color-8: #bde0f3;
-    --primary-color-9: #daf1fa;
+    --primary-color: #49a6e9;
     --primary-color-10: #f3fbfe;
 
     --color-black: #000;
@@ -115,6 +104,7 @@ body {
     background-color: var(--color-white);
 }
 
+/* JS Modal logic */
 .show-overlay {
     visibility: visible !important;
     z-index: 3 !important;
