@@ -1,21 +1,14 @@
 :root {
-    --primary-color-1: #49a6e9;
-
-
-    --primary-color-2: #2d455c;
-    --primary-color-3: #f3fbfe;
-    --primary-color-4: #a3d0ef;
-
+    --blue-800: #2d455c;
+    --blue-500: #49a6e9;
+    --blue-400: #49a6e9;
+    --blue-200: #f3fbfe;
+    --blue-200: #a3d0ef;
 
     --color-black: #000;
     --color-white: #fff;
-    --color-gold: #c59d5f;
-
-    --rgb-black: 0, 0, 0;
-    --rgb-gray: 128, 128, 128;
 
     --overlay-black: rgba(0, 0, 0, 0.7);
-    --overlay-white: rgba(255, 255, 255, 0.5);
     --overlay-hero: rgba(63, 208, 212, 0.5);
 
     --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -23,7 +16,7 @@
 
     --transition: all 0.4s ease-in-out;
     --container-width: 1320px;
-    
+    --font-roboto: 'Roboto', sans-serif;
     --font-open: 'Open Sans', sans-serif;
 
 }
@@ -40,7 +33,7 @@
 body {
     font-size: 16px;
     font-family: var(--font-open);
-    /* background-color: var(--primary-color-4); */
+    /* background-color: var(--blue-200); */
     /* transition: var(--transition); */
 }
 
@@ -212,7 +205,7 @@ section {
 
 .collapse-nav-link:hover {
     border: 1px solid var(--color-black);
-    /* background-color: var(--primary-color-4); */
+    /* background-color: var(--blue-200); */
     padding-left: 20px;
     
 }
@@ -306,7 +299,7 @@ section {
 }
 
 .about-section {
-    background-color: var(--primary-color-3);
+    background-color: var(--blue-200);
 
 }
 
@@ -315,7 +308,7 @@ section {
 }
 
 .tours-section {
-    background-color: var(--primary-color-3);
+    background-color: var(--blue-200);
 }
 
 
@@ -338,12 +331,12 @@ section {
 }
 
 .title-word {
-    color: var(--primary-color-1);
+    color: var(--blue-400);
 }
 
 /* Footer */
 .footer {
-    background-color: var(--primary-color-2);
+    background-color: var(--blue-800);
     padding: 48px 0;
 
 }
@@ -360,7 +353,7 @@ section {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: var(--primary-color);
+    background-color: var(--blue-500);
     color: var(--color-white);
     padding: 10px;
     border-radius: 50%;
