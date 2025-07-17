@@ -1,18 +1,11 @@
 :root {
-    --primary-color: #49a6e9;
-    --rgb-primary-color: 73, 166, 233;
 
-    /* PRIMARY COLORS */
-    --primary-color-1: #0e1a26;
-    --primary-color-2: #1c2e40;
-    --primary-color-3: #2d455c;
-    --primary-color-4: #3e6380;
-    --primary-color-5: #4fa7db;
-    --primary-color-6: #87c3eb;
-    --primary-color-7: #a3d0ef;
-    --primary-color-8: #bde0f3;
-    --primary-color-9: #daf1fa;
-    --primary-color-10: #f3fbfe;
+
+    --blue-500: #49a6e9;
+    --blue-900: #1c2e40;
+    --blue-200: #a3d0ef;
+    --blue-100: #daf1fa;
+    --blue-50: #f3fbfe;
 
     --color-black: #000;
     --color-white: #fff;
@@ -26,7 +19,7 @@
 
     --transition: all 0.4s ease-in-out;
     --container-width: 1320px;
-    --font-roboto: 'Roboto', sans-serif;
+
     --font-open: 'Open Sans', sans-serif;
     --font-cursive: "Great Vibes", cursive;
 }
@@ -41,7 +34,7 @@
 body {
     font-size: 16px;
     font-family: var(--font-open);
-    background-color: var(--primary-color-10);
+    background-color: var(--blue-50);
 
 }
 
@@ -59,12 +52,12 @@ body {
     font-weight: 500;
     text-align: center;
     padding: 10px;
-    border: 1px solid var(--primary-color);
+    border: 1px solid var(--blue-500);
     border-radius: 50px;
     text-decoration: none;
     cursor: pointer;
     background-color: transparent;
-    color: var(--primary-color);
+    color: var(--blue-500);
 }
 
 
@@ -115,7 +108,7 @@ section {
     margin: 0;
     color: var(--color-gold);
     font-size: 24px;
-    transition: transform 0.3s ease-in-out;
+    transition: var(--transition);
 }
 
 .icon {
@@ -133,7 +126,7 @@ section {
     display: none;
     border-top: 1px solid rgba(var(--rgb-gray), 0.5);
     max-height: 0;
-    transition: max-height 0.3s ease-in-out;
+    transition: var(--transition);
     overflow: hidden;
 }
 
@@ -143,10 +136,94 @@ section {
 
 /* Active state */
 .accordion-box.active .accordion-top {
-    background-color: var(--primary-color-7);
+    background-color: var(--blue-200);
 }
 
 .accordion-box.active .icon {
-    background-color: var(--primary-color-2);
+    background-color: var(--blue-900);
     transform: rotate(45deg);
+}
+
+
+@media only screen and (max-width: 575px) {
+    .section-title {
+        font-size: 28px;
+        letter-spacing: 2px;
+        margin-bottom: 32px;
+    }
+
+    .accordion-box {
+        padding-inline: 12px;
+    }
+
+    .accordion-title {
+        font-size: 16px;
+        letter-spacing: 2px;
+    }
+
+    .accordion-desc {
+        font-size: 14px;
+        padding-block: 16px;
+    }
+
+    .fa-plus {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+    .section-title {
+        font-size: 32px;
+        letter-spacing: 3px;
+        margin-bottom: 40px;
+    }
+
+    .accordion-box {
+        padding-inline: 16px;
+    }
+
+    .accordion-title {
+        font-size: 18px;
+    }
+
+    .accordion-desc {
+        font-size: 15px;
+    }
+
+    .fa-plus {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .section-title {
+        font-size: 36px;
+        margin-bottom: 44px;
+    }
+
+    .accordion-title {
+        font-size: 20px;
+    }
+
+    .accordion-desc {
+        font-size: 16px;
+    }
+
+    .fa-plus {
+        font-size: 22px;
+    }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+    .section-title {
+        font-size: 38px;
+    }
+
+    .accordion-title {
+        font-size: 22px;
+    }
+
+    .accordion-desc {
+        font-size: 17px;
+    }
 }
