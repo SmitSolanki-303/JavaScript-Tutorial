@@ -1,7 +1,7 @@
 :root {
 
-    --primary-color: #49a6e9;
-    --primary-color-10: #f3fbfe;
+    --blue-500: #49a6e9;
+    --blue-50: #f3fbfe;
 
     --color-black: #000;
     --color-white: #fff;
@@ -29,7 +29,7 @@
 body {
     font-size: 16px;
     font-family: var(--font-roboto);
-    background-color: var(--primary-color-10);
+    background-color: var(--blue-50);
 
 }
 
@@ -47,12 +47,12 @@ body {
     font-weight: 500;
     text-align: center;
     padding: 10px;
-    border: 1px solid var(--primary-color);
+    border: 1px solid var(--blue-500);
     border-radius: 50px;
     text-decoration: none;
     cursor: pointer;
     background-color: transparent;
-    color: var(--primary-color);
+    color: var(--blue-500);
 }
 
 
@@ -94,13 +94,13 @@ body {
     margin-top: 10px;
     text-transform: uppercase;
     letter-spacing: 4px;
-    background-color: var(--primary-color);
+    background-color: var(--blue-500);
     color: var(--color-white);
     border-radius: 10px;
 }
 
 .primary-btn:hover {
-    color: var(--primary-color);
+    color: var(--blue-500);
     background-color: var(--color-white);
 }
 
@@ -145,7 +145,7 @@ body {
     top: 10px;
     right: 10px;
     font-size: 50px;
-    color: var(--primary-color);
+    color: var(--blue-500);
     cursor: pointer;
 }
 
@@ -184,4 +184,132 @@ body {
     text-align: center;
     font-size: 18px;
     line-height: 30px;
+}
+
+
+/* Responsive Breakpoints */
+@media only screen and (max-width: 575px) {
+    .modal-box {
+        padding: 40px 20px;
+    }
+
+    .modal-title {
+        font-size: 40px;
+    }
+
+    .overlay-modal-box {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+
+    .info-title {
+        font-size: 22px;
+    }
+
+    .info-role {
+        font-size: 18px;
+    }
+
+    .info-desc {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .close-menu {
+        font-size: 30px;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+    .modal-box {
+        padding: 60px 30px;
+    }
+
+    .modal-title {
+        font-size: 50px;
+    }
+
+    .overlay-modal-box {
+        flex-direction: column;
+        height: auto;
+        padding: 30px;
+    }
+
+    .info-title {
+        font-size: 26px;
+    }
+
+    .info-role {
+        font-size: 20px;
+    }
+
+    .info-desc {
+        font-size: 16px;
+        line-height: 28px;
+    }
+
+    .close-menu {
+        font-size: 36px;
+    }
+}
+
+@media only screen and (min-width:769px) and (max-width: 1024px) {
+    .modal-box {
+        padding: 80px;
+    }
+
+    .modal-title {
+        font-size: 60px;
+    }
+
+    .overlay-modal-box {
+        padding: 40px;
+    }
+
+    .info-title {
+        font-size: 28px;
+    }
+
+    .info-role {
+        font-size: 21px;
+    }
+
+    .info-desc {
+        font-size: 17px;
+    }
+
+    .close-menu {
+        font-size: 44px;
+    }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+    .modal-box {
+        padding: 90px;
+    }
+
+    .modal-title {
+        font-size: 70px;
+    }
+
+    .overlay-modal-box {
+        padding: 40px;
+    }
+
+    .info-title {
+        font-size: 30px;
+    }
+
+    .info-role {
+        font-size: 22px;
+    }
+
+    .info-desc {
+        font-size: 18px;
+    }
+
+    .close-menu {
+        font-size: 48px;
+    }
 }
