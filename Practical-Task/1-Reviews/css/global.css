@@ -1,29 +1,14 @@
 :root {
-    --primary-color: #49a6e9;
 
-    /* PRIMARY COLORS */
-    --primary-color-1: #0e1a26;
-    --primary-color-2: #1c2e40;
-    --primary-color-3: #2d455c;
-    --primary-color-4: #3e6380;
-    --primary-color-5: #4fa7db;
-    --primary-color-6: #87c3eb;
-    --primary-color-7: #a3d0ef;
-    --primary-color-8: #bde0f3;
-    --primary-color-9: #daf1fa;
-    --primary-color-10: #f3fbfe;
 
-    /* GREY COLORS */
-    --grey-color-1: #0f1a26;
-    --grey-color-2: #2e3a48;
-    --grey-color-3: #3d4c5c;
-    --grey-color-4: #4f6173;
-    --grey-color-5: #6f7d91;
-    --grey-color-6: #91a0b2;
-    --grey-color-7: #b0bdcb;
-    --grey-color-8: #ced9e1;
-    --grey-color-9: #e7edf3;
-    --grey-color-10: #f5f8fa;
+    --blue-800: #2d455c;
+    --blue-400: #4fa7db;
+    --blue-300: #87c3eb;
+    --blue-200: #a3d0ef;
+    --blue-100: #daf1fa;
+    --blue-50: #f3fbfe;
+
+
 
     --color-black: #222;
     --color-white: #fff;
@@ -34,7 +19,6 @@
 
 
     --container-width: 1320px;
-    --font-roboto: 'Roboto', sans-serif;
     --font-open: 'Open Sans', sans-serif;
 }
 
@@ -48,7 +32,7 @@ body {
     font-size: 16px;
     font-family: var(--font-open);
     overflow-x: hidden;
-    background-color: var(--primary-color-10);
+    background-color: var(--blue-50);
     color: var(--color-black);
 }
 
@@ -64,7 +48,7 @@ body {
     font-size: 16px;
     font-weight: 500;
     padding: 10px;
-    border: 1px solid black;
+    border: 1px solid var(--color-black);
     border-radius: 10px;
     text-decoration: none;
     cursor: pointer;
@@ -97,7 +81,7 @@ body {
 .underline {
     width: 80px;
     height: 4px;
-    background-color: var(--primary-color-5);
+    background-color: var(--blue-400);
     margin: 0 auto
 }
 
@@ -109,7 +93,7 @@ body {
     padding: 20px;
     border-radius: 20px;
     /* border: 1px solid black; */
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 var(--dark-shadow), 0 6px 20px 0 var(--light-shadow);
     background-color: var(--color-white);
 
 }
@@ -124,7 +108,7 @@ body {
     position: absolute;
     height: 40px;
     width: 40px;
-    background-color: var(--primary-color-6);
+    background-color: var(--blue-300);
     color: var(--color-white);
     border-radius: 50px;
     font-size: 50px;
@@ -137,7 +121,7 @@ body {
     width: 100%;
     object-fit: cover;
     border-radius: 100px;
-    box-shadow: 12px 0px 0px var(--primary-color-6);
+    box-shadow: 12px 0px 0px var(--blue-300);
 }
 
 .review-info {
@@ -158,7 +142,7 @@ body {
     font-size: 20px;
     font-weight: 500;
     text-align: center;
-    color: var(--primary-color-5);
+    color: var(--blue-400);
 
 }
 
@@ -184,7 +168,7 @@ body {
 .prev-btn,
 .next-btn {
     font-size: 24px;
-    color: var(--primary-color-7);
+    color: var(--blue-200);
     background-color: transparent;
     border: 0px;
     cursor: pointer;
@@ -195,23 +179,23 @@ body {
 
 .prev-btn:hover,
 .next-btn:hover {
-    color: var(--primary-color-5);
+    color: var(--blue-400);
 }
 
 .prev-btn:focus,
 .next-btn:focus {
-    border: 2px solid var(--primary-color-5);
+    border: 2px solid var(--blue-400);
 }
 
 .primary-btn {
-    color: var(--primary-color-5);
-    border: 1px solid var(--primary-color-5);
+    color: var(--blue-400);
+    border: 1px solid var(--blue-400);
 }
 
 .primary-btn:hover {
-    color: var(--primary-color-3);
-    background-color: var(--primary-color-9);
-    border: 1px solid var(--primary-color-3);
+    color: var(--blue-800);
+    background-color: var(--blue-100);
+    border: 1px solid var(--blue-800);
 }
 
 /* Responsive Breakpoints */
@@ -267,9 +251,3 @@ body {
         line-height: 26px;
     }
 }
-
-/* 
-@media only screen and (min-width:769px) and (max-width: 1024px) {}
-
-
-@media only screen and (min-width: 1025px) and (max-width: 1280px) {} */
