@@ -1,38 +1,29 @@
 document.addEventListener("DOMContentLoaded", function () {
-  var accordionTop = document.querySelectorAll(".accordion-top");
+  var accordions = document.querySelectorAll(".accordion");
 
-  accordionTop.forEach((accordion) => {
-    // console.log(accordion);
-    accordion.addEventListener("click", function (e) {
+  accordions.forEach((accordion) => {
+    const accordionHead = accordion.querySelector(".accordion-head");
+    const accordionBody = accordion.querySelector(".accordion-body");
+    // const accordionDesc = accordion.querySelector(".accordion-desc");
+    const icon = accordion.querySelector(".fa-plus");
 
-      var icon = accordion.querySelector(".fa-plus");
-      var content = accordion.nextElementSibling;
-      // icon.style.transform = "rotate(135deg)";
-      console.log(content);
 
-      var isVisible = content.style.display === "block";
+    accordionHead.addEventListener("click", () => {
+      const isVisible = accordionBody.classList.contains("show");
 
-      if (isVisible) {
-        icon.style.transform = "rotate(0deg)";
-        content.style.display = "none";
-      } else {
-        icon.style.transform = "rotate(135deg)";
-        content.style.display = "block";
-        content.style.maxHeight = content.scrollHeight + "px";
+      // Close all accordions first
+      accordions.forEach((item) => {
+        item.querySelector(".accordion-body").classList.remove("show");
+        // item.querySelector(".accordion-desc").style.maxHeight = "0px";
+        item.querySelector(".fa-plus").classList.remove("arrow-rotate");
+      });
+
+      if (!isVisible) {
+        // Open the clicked one
+        accordionBody.classList.toggle("show");
+        // accordionDesc.style.maxHeight = accordionDesc.scrollHeight + "px";
+        icon.classList.toggle("arrow-rotate");
       }
     });
   });
 });
-
-
-// var plusIcon = accordion.querySelector(".fa-plus");
-// var content = accordion.nextElementSibling;
-
-// if (content.style.display == "block") {
-//   plusIcon.style.transform = "rotate(0deg)";
-//   content.style.display = "none";
-// } else {
-//   plusIcon.style.transform = "rotate(135deg)";
-//   content.style.display = "block";
-//   content.style.maxHeight = content.scrollHeight + "px";
-// }
