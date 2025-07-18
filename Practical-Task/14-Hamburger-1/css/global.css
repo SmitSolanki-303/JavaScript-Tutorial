@@ -8,6 +8,7 @@
     --transition: all 0.4s ease-in;
     --container-width: 1320px;
     --font-roboto: 'Roboto', sans-serif;
+    --font-open: 'Open Sans', sans-serif;
 }
 
 * {
@@ -26,7 +27,7 @@ html {
 
 body {
     font-size: 16px;
-    font-family: var(--font-roboto);
+    font-family: var(--font-open);
 
 }
 
@@ -470,7 +471,7 @@ section {
 
 .accordion-body.show {
     visibility: visible;
-    height: 82px;
+    height: auto;
     margin-top: 10px;
 }
 
