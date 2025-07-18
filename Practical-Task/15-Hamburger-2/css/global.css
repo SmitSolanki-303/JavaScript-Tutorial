@@ -1,0 +1,236 @@
+:root {
+    --blue-800: #2d455c;
+    --blue-500: #49a6e9;
+    --blue-400: #49a6e9;
+    --blue-200: #f3fbfe;
+    --blue-200: #a3d0ef;
+
+    --color-blue: #00aeef;
+    --color-black: #000;
+    --color-white: #fff;
+    --color-gray: #808080;
+    --color-light-gray: #D3D3D3;
+
+    --transition: all 0.4s ease-in;
+    --container-width: 1320px;
+    --font-roboto: 'Roboto', sans-serif;
+    --font-open: 'Open Sans', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    overscroll-behavior: none;
+
+}
+
+/* 
+html {
+    overflow-y: hidden;
+} */
+
+body {
+    font-size: 16px;
+    font-family: var(--font-open);
+    background-color: var(--color-white);
+}
+
+.noScroll {
+    overflow: hidden !important;
+}
+
+section {
+    height: 100vh;
+    width: 100%;
+    padding-block: 48px;
+    box-shadow: 0 4px 8px 0 var(--dark-shadow);
+}
+
+
+/* Reusable Class */
+.container {
+    max-width: var(--container-width);
+    width: 100%;
+    padding-inline: 16px;
+    margin: 0 auto;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid var(--color-black);
+    background-color: transparent;
+    color: var(--color-black);
+    font-size: 18px;
+}
+
+
+
+header {
+    padding-block: 16px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    background-color: var(--color-white);
+}
+
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hamburger-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.hamburger-menu {
+    font-size: 30px;
+    cursor: pointer;
+    color: var(--color-black);
+}
+
+.logo-container {
+    aspect-ratio: 101 / 37;
+    overflow: hidden;
+}
+
+.logo-image {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.input-wrapper {
+    width: 50%;
+    display: inline-flex;
+    align-items: center;
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid var(--accent-color);
+    background-color: var(--color-light-gray);
+    color: var(--color-black);
+    font-size: 18px;
+}
+
+.search-input::placeholder {
+    color: var(--color-black);
+    font-size: 14px;
+}
+
+.search-input:focus {
+    outline: none;
+}
+
+.primary-btn {
+    background-color: var(--color-blue);
+    color: var(--color-white);
+    border: 1px solid var(--color-blue);
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: 18px;
+}
+
+
+
+/* Main Content */
+.main-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 75px;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+
+.about-section {
+    background-color: var(--color-white);
+
+}
+
+.services-section {
+    background-color: var(--color-white);
+}
+
+.tours-section {
+    background-color: var(--color-white);
+}
+
+
+.section-title {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    color: var(--color-black);
+    margin-bottom: 20px;
+}
+
+.section-description {
+    font-size: 18px;
+    text-align: center;
+    color: var(--color-black);
+    line-height: 1.6;
+    margin-bottom: 20px;
+    max-width: 660px;
+    width: 100%;
+}
+
+.title-word {
+    color: var(--blue-400);
+}
+
+
+/* Responsive Breakpoints */
+@media only screen and (max-width: 575px) {
+    /* Header */
+    .desktop {
+        display: none;
+    }
+
+    .header-wrapper {
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        gap: 20px;
+    }
+
+    .header-container {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .hamburger-wrapper{
+        gap: 10px;
+    }
+}
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+
+}
+@media only screen and (min-width:769px) and (max-width: 1024px) {
+
+}
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+
+}
