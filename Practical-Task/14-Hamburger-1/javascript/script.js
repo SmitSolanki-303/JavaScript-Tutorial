@@ -68,7 +68,6 @@ var accordions = document.querySelectorAll(".accordion");
 accordions.forEach((accordion) => {
   const accordionHead = accordion.querySelector(".accordion-head");
   const accordionBody = accordion.querySelector(".accordion-body");
-  // const accordionDesc = accordion.querySelector(".accordion-desc");
   const icon = accordion.querySelector(".fa-chevron-down");
 
   accordionHead.addEventListener("click", () => {

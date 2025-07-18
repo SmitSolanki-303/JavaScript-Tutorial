@@ -127,7 +127,8 @@ section {
     border-top: 1px solid rgba(var(--rgb-gray), 0.5);
     height: 0;
     transition: var(--transition);
-    /* overflow: hidden; */
+    overflow: hidden;
+    position: relative;
 }
 
 .accordion-body.show {
@@ -142,11 +143,7 @@ section {
 }
 
 /* Active state */
-.accordion.active .accordion-head {
-    background-color: var(--blue-200);
-}
-
-.arrow-rotate {
+.fa-plus.show {
     /* background-color: var(--blue-900); */
     transform: rotate(45deg);
     transition: var(--transition);

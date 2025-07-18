@@ -4,26 +4,33 @@ document.addEventListener("DOMContentLoaded", function () {
   accordions.forEach((accordion) => {
     const accordionHead = accordion.querySelector(".accordion-head");
     const accordionBody = accordion.querySelector(".accordion-body");
-    // const accordionDesc = accordion.querySelector(".accordion-desc");
     const icon = accordion.querySelector(".fa-plus");
 
-
-    accordionHead.addEventListener("click", () => {
+    accordionHead.addEventListener("click", (e) => {
       const isVisible = accordionBody.classList.contains("show");
-
       // Close all accordions first
       accordions.forEach((item) => {
         item.querySelector(".accordion-body").classList.remove("show");
-        // item.querySelector(".accordion-desc").style.maxHeight = "0px";
-        item.querySelector(".fa-plus").classList.remove("arrow-rotate");
+        item.querySelector(".fa-plus").classList.remove("show");
       });
-
       if (!isVisible) {
         // Open the clicked one
         accordionBody.classList.toggle("show");
-        // accordionDesc.style.maxHeight = accordionDesc.scrollHeight + "px";
-        icon.classList.toggle("arrow-rotate");
+        icon.classList.toggle("show");
       }
     });
   });
 });
+
+// const isVisible = accordionBody.classList.contains("show");
+// // Close all accordions first
+// accordions.forEach((item) => {
+//   item.querySelector(".accordion-body").classList.remove("show");
+//   item.querySelector(".fa-plus").classList.remove("show");
+// });
+
+// if (!isVisible) {
+//   // Open the clicked one
+//   accordionBody.classList.toggle("show");
+//   icon.classList.toggle("show");
+// }
