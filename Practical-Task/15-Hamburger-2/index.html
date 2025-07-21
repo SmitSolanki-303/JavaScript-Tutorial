@@ -22,13 +22,17 @@
 </head>
 
 <body>
+
+    <!-- z-index: 2 -->
     <header>
         <div class="container">
             <div class="header-wrapper">
 
                 <div class="header-container">
+
+
                     <div class="hamburger-wrapper">
-                        <div class="hamburger-menu">
+                        <div class="hamburger-menu" id="hamburgerBtn">
                             <i class="fa-solid fa-bars"></i>
                         </div>
 
@@ -45,14 +49,30 @@
                 </div>
 
                 <div class="input-wrapper mobile">
-                        <input type="search" class="search-input" placeholder="Search for offers, stores...">
-                    </div>
+                    <input type="search" class="search-input" placeholder="Search for offers, stores...">
+                </div>
+
+
+                <!-- Overlay -->
+                <!-- z-index: 2 -->
+                <div class="overlay" id="overlay"></div>
+
 
 
                 <!-- Sidebar -->
-                <div class="sidebar">
+                <!-- Z-index: 100 -->
+                <div class="sidebar" id="sidebar">
+                    <div class="sidebar-close" id="sidebarClose">
+                        <i class="fa-solid fa-times"></i>
+                    </div>
                     <div class="sidebar-wrapper">
-
+                        <nav>
+                            <ul class="sidebar-nav">
+                                <li><a href="#about">About</a></li>
+                                <li><a href="#services">Services</a></li>
+                                <li><a href="#tours">Tours</a></li>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
             </div>
